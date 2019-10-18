@@ -35,6 +35,7 @@ public class Roll extends BaseEggRollServer {
         CommandLine cmd = parseArgs(args);
 
         if (cmd == null) {
+            confFilePath = cmd.getOptionValue("c");
             return;
         }
 
