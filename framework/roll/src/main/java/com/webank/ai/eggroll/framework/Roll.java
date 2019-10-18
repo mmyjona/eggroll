@@ -34,11 +34,15 @@ public class Roll extends BaseEggRollServer {
         String confFilePath = null;
         CommandLine cmd = parseArgs(args);
 
-        if (cmd == null) {
+        if (cmd != null) {
             return;
         }
 
-        confFilePath = cmd.getOptionValue("c");
+        confFilePath = cmd.
+            
+            
+            
+            getOptionValue("c");
 
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext-roll.xml");
 
