@@ -42,10 +42,9 @@ public class ClusterComm extends BaseEggRollServer {
         CommandLine cmd = parseArgs(args);
 
         if (cmd == null) {
-            return;
+            confFilePath = cmd.getOptionValue("c");
         }
 
-        confFilePath = cmd.getOptionValue("c");
 
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext-clustercomm.xml");
         ThreadPoolTaskExecutor clusterCommAsyncThreadPool = (ThreadPoolTaskExecutor) context.getBean("clusterCommAsyncThreadPool");
